@@ -1,11 +1,12 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 function Help() {
     return (
         <div>
-            <p>This will be the text that tells how app works</p>
+            <h2>This will be the text that tells how app works</h2>
             <br />
-            <button>BACK</button>
+            <button><NavLink to="/">BACK</NavLink></button>
         </div>
     )
 }
