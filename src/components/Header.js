@@ -3,7 +3,7 @@ import "../styles/headerStyle.css"
 
 function Header() {
     return (
-        <h1>Welcome to Bill Splitter!</h1>
+        <h1>Bill Splitter Application</h1>
     )
 }
 
