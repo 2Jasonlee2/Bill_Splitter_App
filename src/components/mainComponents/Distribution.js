@@ -1,7 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-function Distribution() {
+function Distribution(props) {
     return (
         <div>
             <h2>Final Amounts: </h2>

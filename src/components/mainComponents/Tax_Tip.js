@@ -1,7 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-function Tax_Tip() {
+function Tax_Tip(props) {
     return (
         <div>
             <h2>Tax Amount? Tip Amount?</h2>
