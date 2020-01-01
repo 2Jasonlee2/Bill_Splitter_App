@@ -7,7 +7,7 @@ class Start extends React.Component {
         super()
         this.state = {
             countPeople: "",
-            people: ["", "", "", "", ""]
+            people: ["a", "s", "", "", ""]
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -15,7 +15,7 @@ class Start extends React.Component {
     handleChange(event) {
         const {id, name, value} = event.target
         if(name === "countPeople") {
-            this.setState({ [name] : value })
+            this.setState({ [name] : +value })
         }
         else {
             let newPeople = this.state.people.map((p, ind) => ind === +id ? value : p)
