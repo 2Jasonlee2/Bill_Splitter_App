@@ -1,3 +1,8 @@
+/**
+ * Main Component that loads the Header and the Main Component.
+ * The Main Component changes while the header remains static.
+ */
+
 import React from "react"
 
 import Header from "./components/Header.js"
