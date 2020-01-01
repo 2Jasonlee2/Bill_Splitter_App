@@ -7,7 +7,7 @@ class Start extends React.Component {
         super()
         this.state = {
             countPeople: "",
-            people: ["a", "s", "", "", ""]
+            people: ["", "", "", "", ""]
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -51,7 +51,7 @@ class Start extends React.Component {
                     <label>
                         <input type="radio"
                                 name="countPeople"
-                                checked={this.state.countPeople === "2"}
+                                checked={this.state.countPeople === 2}
                                 onChange={this.handleChange}
                                 value={2}
                         /> 2
@@ -59,7 +59,7 @@ class Start extends React.Component {
                     </label>
                         <input type="radio"
                                 name="countPeople"
-                                checked={this.state.countPeople === "3"}
+                                checked={this.state.countPeople === 3}
                                 onChange={this.handleChange}
                                 value={3}
                         /> 3
@@ -67,7 +67,7 @@ class Start extends React.Component {
                     </label>
                         <input type="radio"
                                 name="countPeople"
-                                checked={this.state.countPeople === "4"}
+                                checked={this.state.countPeople === 4}
                                 onChange={this.handleChange}
                                 value={4}
                         /> 4
@@ -75,7 +75,7 @@ class Start extends React.Component {
                     </label>
                         <input type="radio"
                                 name="countPeople"
-                                checked={this.state.countPeople === "5"}
+                                checked={this.state.countPeople === 5}
                                 onChange={this.handleChange}
                                 value={5}
                         /> 5
