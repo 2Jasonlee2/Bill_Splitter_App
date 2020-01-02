@@ -37,7 +37,7 @@ function Distribution(props) {
         <div>
             <h2>- Final Amounts -</h2>
             {peopleDetails}
-            <h2>Total Bill: {totalCost.toFixed(2)}</h2>
+            <h2>Total Bill: ${totalCost.toFixed(2)}</h2>
             <button><NavLink to="/">Back To Start</NavLink></button>
         </div>
     )
