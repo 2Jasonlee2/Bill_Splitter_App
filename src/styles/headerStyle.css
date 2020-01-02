@@ -1,7 +1,7 @@
-h1 {
-    font-family: arial;
+.blueHeader {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 20px;
     font-size: 50px;
-    font-weight: 10;
 
     text-align:center;
     padding: 20px;
