@@ -4,29 +4,40 @@
  * needs to pay.
  */
 
-import React from "react"
+import React, {useEffect, useState} from "react"
 import { NavLink } from "react-router-dom"
 import FinalPerson from "./FinalPerson.js"
 
 function Distribution(props) {
+    const colors = ['tomato', 'dodgerBlue', 'violet', 'yellow', 'mediumSeaGreen', 'slateBLue', 'orange']
+    const splitTip = (props.location.state.tip / props.location.state.countPeople)
 
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue']
-    const splitTip = (props.location.state.tip/props.location.state.countPeople)
+    const [totalCost, setTotalCost] = useState(0)
+    const [peopleDetails, setPeopleDetails] = useState([])
 
-    const peopleDetails = props.location.state.personList.map((p,i) => {
+    /**
+     * Will create peopleDetails array only once (componentDidMount effect)
+     */
+    useEffect(() => {setPeopleDetails(props.location.state.personList.map((p,i) => {
         return p === "" ? null : <FinalPerson name={p} 
-                                              color={colors[i]}
-                                              prices={props.location.state.prices[i]}
-                                              tipAmount={splitTip}
-                                              taxAmount={props.location.state.tax}
-                                              key={i}
-                                              id={i}/>
-    })
+                                                color={colors[i]}
+                                                prices={props.location.state.prices[i]}
+                                                tipAmount={splitTip}
+                                                taxAmount={props.location.state.tax}
+                                                addTotal={addTotal}
+                                                key={i}
+                                                id={i}/>
+    }))}, [])
+
+    function addTotal(cost) {
+        setTotalCost(prevCost => prevCost + (+cost))
+    }
 
     return (
         <div>
-            <h2>Final Amounts</h2>
+            <h2>- Final Amounts -</h2>
             {peopleDetails}
+            <h2>Total Bill: {totalCost.toFixed(2)}</h2>
             <button><NavLink to="/">Back To Start</NavLink></button>
         </div>
     )
