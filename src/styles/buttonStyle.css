@@ -10,6 +10,11 @@ button {
     width:300px;
 }
 
+h2 {
+    font-family: arial;
+    font-size: 50px;
+}
+
 button:not(:last-child) {
     border-right: none;
 }
