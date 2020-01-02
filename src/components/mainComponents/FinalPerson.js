@@ -19,8 +19,7 @@ function DisplayPerson(props) {
         <div>
             <img src={person_icon} alt="Person" style={{backgroundColor:props.color}} />
             <h4>{props.name}</h4>
-            <p>final contribution: {finalAmount}</p>
-            <br />
+            <p>final amount owed: ${finalAmount}</p>
         </div>
     )   
 }
