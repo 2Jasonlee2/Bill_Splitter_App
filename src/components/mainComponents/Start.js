@@ -52,7 +52,7 @@ class Start extends React.Component {
         return (
             <div>
                 <h2>Welcome to the Bill Splitter Application!</h2>
-                <h3>Get started by entering the number of people splitting the bill</h3>
+                <h3>Get started by selecting the number of people splitting the bill</h3>
                 <form>
                     <label>
                         <input type="radio"

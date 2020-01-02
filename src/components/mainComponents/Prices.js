@@ -10,13 +10,15 @@ import { NavLink } from "react-router-dom"
 import Person from "./Person.js"
 
 function Prices(props) {
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue']
+    const colors = ['tomato', 'dodgerBlue', 'violet', 'yellow', 'mediumSeaGreen', 'slateBLue', 'orange']
     const prices = [[],[],[],[],[]]
 
+    // gets passed to Person component to update prices array here
     function updatePrices(i, arr) {
         prices[i] = arr
     }
 
+    // creates array of people with price boxes underneath
     const peopleDetails = props.location.state.people.map((p,i) => {
         return p === "" ? null : <Person name={p}
                                          color={colors[i]}
@@ -27,7 +29,7 @@ function Prices(props) {
 
     return (
         <div>
-            <h2>Enter prices of items for each person</h2>
+            <h2>- Enter prices of items for each person -</h2>
             <br />
 
             {peopleDetails}

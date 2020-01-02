@@ -11,8 +11,12 @@ function Person(props) {
         props.updatePrices(props.id, newPrices)
     }
 
+    /**
+     * This function genereates the fields to enter in the prices of items for each person
+     */
     function genNameFields() {
         let arr = []
+        // item count is limited to 5 for now
         for(let i = 0; i < 5; i++) {
             arr.push(
                     <div key={i}>
@@ -33,8 +37,8 @@ function Person(props) {
 
     return (
         <div>
-            <img src={person_icon} alt="Person" style={{width: 50, height: 50, backgroundColor:props.color}} />
-            <p>{props.name}</p>
+            <img src={person_icon} alt="Person" style={{backgroundColor: props.color}} />
+            <h4>{props.name}</h4>
 
             {genNameFields()}
             <br />
