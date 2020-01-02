@@ -92,7 +92,6 @@ class Start extends React.Component {
                 {this.state.countPeople === "" ? null : <h3>Enter the people's names below</h3>}
                 {this.genNameFields()}
                 </form>
-
                 <br />
 
                 <button>
