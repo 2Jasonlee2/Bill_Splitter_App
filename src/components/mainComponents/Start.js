@@ -1,3 +1,9 @@
+/**
+ * The start screen of the main component. Allows user to choose the num of
+ * people splitting the bill and also input names of each person. The data is
+ * carried to the "Prices" component
+ */
+
 import React from "react"
 import  { NavLink } from "react-router-dom"
 
@@ -46,7 +52,7 @@ class Start extends React.Component {
         return (
             <div>
                 <h2>Welcome to the Bill Splitter Application!</h2>
-                <h2>Get started by entering the number of people splitting the bill</h2>
+                <h3>Get started by entering the number of people splitting the bill</h3>
                 <form>
                     <label>
                         <input type="radio"
@@ -83,7 +89,7 @@ class Start extends React.Component {
                     <br />
 
                 {/** If # people have been entered show table to input names */}
-                {this.state.countPeople === "" ? null : <h2>Enter the people's names below</h2>}
+                {this.state.countPeople === "" ? null : <h3>Enter the people's names below</h3>}
                 {this.genNameFields()}
                 </form>
 

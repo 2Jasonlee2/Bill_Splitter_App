@@ -1,3 +1,9 @@
+/**
+ * The main component of the web app. I set up all of the routes here
+ * with the start of the app leading to the "Start" component. If another
+ * route is triggered will show here.
+ */
+
 import React from "react"
 import { Route, HashRouter } from "react-router-dom"
 

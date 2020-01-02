@@ -1,3 +1,10 @@
+/**
+ * Phase 2 of my web app, after user enters in the people splitting bill
+ * they can enter in the separate expenses of each person. Will create
+ * "Person" component for each person, and data is then passed to "Tax_Tip" 
+ * component
+ */
+
 import React from "react"
 import { NavLink } from "react-router-dom"
 import Person from "./Person.js"

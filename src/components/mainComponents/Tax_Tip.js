@@ -1,3 +1,10 @@
+/**
+ * After user enters in the expenses of each person, they can enter
+ * in the tax percentage and tip amount. Tip is split evenly between
+ * each person regardless of their expenses. All the data is then passed
+ * to "Distribution" component 
+ */
+
 import React, {useState} from "react"
 import { NavLink } from "react-router-dom"
 

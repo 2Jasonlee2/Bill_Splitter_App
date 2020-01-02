@@ -1,3 +1,9 @@
+/**
+ * After the user has inputted all information, This final screen will
+ * display each person again and show the total amount that each person
+ * needs to pay.
+ */
+
 import React from "react"
 import { NavLink } from "react-router-dom"
 import FinalPerson from "./FinalPerson.js"
